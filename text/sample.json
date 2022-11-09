@@ -1,0 +1,62 @@
+[
+    {
+        "id":0,
+        "firstName": "Joe",
+        "lastName": "Jackson",
+        "gender": "male",
+        "age": 28,
+        "address": {
+            "streetAddress": "101",
+            "city": "San Diego",
+            "state": "CA"
+        },
+        "phoneNumbers": [
+            { "type": "home", "number": "7349282382" }
+        ]
+    },
+    {
+        "id":1,
+        "firstName": "John",
+        "lastName": "Smith",
+        "gender": "male",
+        "age": 38,
+        "address": {
+            "streetAddress": "101",
+            "city": "North Carolina",
+            "state": "NC"
+        },
+        "phoneNumbers": [
+            { "type": "home", "number": "7349282382" }
+        ]
+    },
+    {
+        "id":2,
+        "firstName": "Matiz",
+        "lastName": "Marida",
+        "gender": "female",
+        "age": 25,
+        "address": {
+            "streetAddress": "101",
+            "city": "New York",
+            "state": "NYC"
+        },
+        "phoneNumbers": [
+            { "type": "home", "number": "7349282382" }
+        ]
+    },
+    {
+        "id":3,
+        "firstName": "Darid",
+        "lastName": "S",
+        "gender": "female",
+        "age": 25,
+        "address": {
+            "streetAddress": "101",
+            "city": "New York",
+            "state": "NYC"
+        },
+        "phoneNumbers": [
+            { "type": "home", "number": "7349282382" }
+        ]
+    }
+]

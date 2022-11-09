@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "3758ae28-cbcd-4a44-b732-5555fd878d88",
+		"name": "Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3002/api/v1/tour",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjI0NzU3ZTc1MWRmM2IxNzBhN2Y5ZSIsImlhdCI6MTY2NzM4NTE3NSwiZXhwIjoxNjY3NDcxNTc1fQ.LjuqTkPz8E0Qe3_I600B60-JbeIX-3tpVPEJ4qMR0AE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3002/api/v1/tour",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"tour"
+					],
+					"query": [
+						{
+							"key": "duration[lt]",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "price[gt]",
+							"value": "1400",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "-price,duration",
+							"disabled": true
+						},
+						{
+							"key": "fields",
+							"value": "name,duration,price",
+							"disabled": true
+						},
+						{
+							"key": "difficulty",
+							"value": "easy",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3002/api/v1/tour",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"ddsdsdsddddsd\",\n    \"duration\": 9,\n    \"maxGroupSize\": 20,\n    \"difficulty\": \"easy\",\n    \"ratingsAverage\": 4.6,\n    \"ratingsQuantity\": 54,\n    \"price\": 1197,\n    \"summary\": \"Living the life of Wanderlust in the US' most beatiful cities\",\n    \"description\": \"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet.\\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat!\",\n    \"imageCover\": \"tour-4-cover.jpg\",\n    \"images\": [\n        \"tour-4-1.jpg\",\n        \"tour-4-2.jpg\",\n        \"tour-4-3.jpg\"\n    ],\n    \"startDates\": [\n        \"2021-03-11,10:00\",\n        \"2021-05-02,10:00\",\n        \"2021-06-09,10:00\"\n    ],\n    \"secreteTour\":true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/api/v1/tour",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"tour"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3002/api/v1/tour/4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/api/v1/tour/635123b8d7b21a7cd895a3ce",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"tour",
+						"635123b8d7b21a7cd895a3ce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3002/api/v1/tour/9",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"The solo Hiker\",\n    \"rating\": 2.7,\n    \"price\": 456\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/api/v1/tour/634e712772c71e69711081be",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"tour",
+						"634e712772c71e69711081be"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3002/api/v1/user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/api/v1/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3002/api/v1/tour/634e4e617bac87492c658070",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjM2YzkzNDM2NzViMThkYWI5NWIzZiIsImlhdCI6MTY2NzQ2MDYzNiwiZXhwIjoxNjY3NTQ3MDM2fQ.JGhAAGULC8ewWJGIqNHoYD3gY00rMAM72Lh_30HfEGo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3002/api/v1/tour/63636daa18ef721b5bc2d64d",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"tour",
+						"63636daa18ef721b5bc2d64d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3002/api/v1/tou/get-tour-state",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/api/v1/tour/tour-stat",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"tour",
+						"tour-stat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3002/api/v1/tour/tour-plan/2021",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/api/v1/tour/tour-plan/2021",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"tour",
+						"tour-plan",
+						"2021"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3002/api/v1/user/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"admin\",\n    \"email\":\"admin@yopmail.com\",\n    \"password\":\"admin12345\",\n    \"passwordConfirm\":\"admin12345\",\n    \"passwordChangedAt\":\"2022-11-02\",\n    \"role\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/api/v1/user/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3002/api/v1/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"user@yopmail.com\",\n    \"password\":\"test1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/api/v1/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3002/api/v1/user/forgotpassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"user@yopmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/api/v1/user/forgotpassword",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"forgotpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/api/v1/users/resetPassword/0cd66091d804b3c3f427aa68eab3c03ad247a0ae5e3abd71bd2e72914e680cbc",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\":\"user@1234\",\n    \"passwordConfirm\":\"user@1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/api/v1/user/resetpassword/cfa0167163bd195e8a0208255545ad4c079aa167f68aaea540e763e7b39478d1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"resetpassword",
+						"cfa0167163bd195e8a0208255545ad4c079aa167f68aaea540e763e7b39478d1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/api/v1/user/changepassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjI2M2E3OThiMTkyNjQ0ZDE0ZGM0MyIsImlhdCI6MTY2NzU0NDQxMywiZXhwIjoxNjY3NjMwODEzfQ.cDVvaFVLtL1JyxmCm5dcOkJX-ikaNtZWQ22hfQBs4iw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"passwordCurrent\":\"test1234\",\n    \"password\":\"test1234\",\n    \"passwordConfirm\":\"test1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/api/v1/user/changepassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"changepassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/api/v1/user/updateme",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjI2M2E3OThiMTkyNjQ0ZDE0ZGM0MyIsImlhdCI6MTY2NzU1NjI1MiwiZXhwIjoxNjY3NjQyNjUyfQ._SPSZbBueUX8d0UOIoni6kCsI075yy1eW9Yl8Hi1cjM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"user update\",\n    \"email\":\"user@yopmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/api/v1/user/updateme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"updateme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/api/v1/user/deleteme",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjI2M2E3OThiMTkyNjQ0ZDE0ZGM0MyIsImlhdCI6MTY2NzU1NjI1MiwiZXhwIjoxNjY3NjQyNjUyfQ._SPSZbBueUX8d0UOIoni6kCsI075yy1eW9Yl8Hi1cjM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3002/api/v1/user/deleteme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"deleteme"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
