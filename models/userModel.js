@@ -21,7 +21,10 @@ const userSchema = new mongoose.Schema({
     maxlength: [20, "User name cannot be max than 20 character"],
     minlength: [3, "User name cannot be less than 3 character"],
   },
-  photo: String,
+  photo: {
+    type: String,
+    default: "default.jpg",
+  },
   role: {
     type: String,
     enum: ["user", "guide", "lead-guide", "admin"],
