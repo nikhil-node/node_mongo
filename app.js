@@ -1,12 +1,14 @@
+const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
+const multer = require("multer"); // For file upload
 //  Middleware
 const app = express();
 const rateLimit = require("express-rate-limit");
-const helmet = require("helmet");
+const helmet = require("helmet"); // Secure HTTP headers
 const mongoSantize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
-const hpp = require("hpp");
+const hpp = require("hpp"); // Query polution preventing
 
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
@@ -15,6 +17,12 @@ const userRouter = require("./routes/userRoutes");
 const reviewRouter = require("./routes/reviewRouter");
 
 //const review = require("./models/reviewModel");
+
+app.set("view engine", "pug"); // Express framework for render view
+app.set("views", path.join(__dirname, "views"));
+
+//Static file access
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.json({ limit: "10kb" }));
 // Morgan middleware
@@ -39,10 +47,11 @@ app.use((req, res, next) => {
   res.duration = new Date().toISOString();
   next();
 });
-//Static file access
-app.use(express.static(`${__dirname}/public`));
 
 //Routes
+app.get("/", (req, res) => {
+  res.status(200).render("base");
+});
 // app.get('/api/v1/tour',getAllTour);
 // app.get('/api/v1/tour/:id',getTour);
 // app.post('/api/v1/tour',createTour);
